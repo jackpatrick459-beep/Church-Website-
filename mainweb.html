@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>America Seventh Day Adventist Church</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="https://www.adventist.org/wp-content/themes/sdaorg-theme/assets/img/sda-logo-gold.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="sda.logo.jpg" alt="SDA Logo" class="church-logo">
+                    <span>America Seventh Day Adventist Church</span>
+                </div>
+
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Ministries">Ministries</a></li>
+                    <li><a href="leaders.html">Leadership</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#Visit">Visit</a></li>
+                    <li><a href="#Contact Us" class="nav-btn">Contact us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <style>
+
+            html{
+                scroll-behavior: smooth;
+            }
+
+            section{
+                scroll-margin-top: 80px;
+            }
+
+            /*church logo*/
+            header {
+                background-color: #ffffff;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Adds that clean shadow under the nav */
+                position: sticky;
+                top: 0;
+                z-index: 1000; /* Keeps it above everything when you scroll */
+            }
+
+            .navbar {
+                display: flex;
+                justify-content: space-between; /* Pushes logo and links apart */
+                align-items: center;
+                padding: 15px 5%; /* Adjusts spacing on the sides */
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .church-logo {
+                height: 50px;
+                width: auto;
+                display: block;
+                object-fit: contain;
+
+            }
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+                gap: 30px; /* Space between links */
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: #555;
+                font-weight: 500;
+                transition: 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: #3498db; /* Changes color when you hover */
+                border-bottom: 2px solid #3498db;
+            }
+
+            /* Optional: Make the "Contact Us" look like a button */
+            .nav-btn {
+                background-color: #2c3e50;
+                color: white !important;
+                padding: 8px 20px;
+                border-radius: 5px;
+            }
+
+            .nav-btn:hover {
+                background-color: #34495e;
+            }
+
+            /*HOMEPAGE*/
+            .homehero{
+                min-height: calc(100vh - 80px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /*background setup*/
+                position: relative;
+                background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url("https://images.unsplash.com/photo-1656378130547-003a265a05e5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                color: white;
+                text-align: center;
+                overflow: hidden;
+                height: 100vh;
+                width: 100%;
+                background-repeat: no-repeat;
+            }
+
+            .homeoverlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5);
+                z-index: 1;
+            }
+
+            /*typography*/
+
+            .homehero-content{
+                position: relative;
+                z-index: 2;
+                padding: 20px;
+                max-width: 800px;
+            }
+
+            .subtitle{
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                opacity: 0.9;
+            }
+
+            .quote{
+                font-size: 2.5rem;
+                font-style: italic;
+                margin-bottom: 15px;
+                line-height: 1.2;
+                text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+            }
+
+            .reference{
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+
+            /* Navbar */
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 5%;
+                background: transparent;
+                border-bottom: 1px solid var(--border-light);
+            }
+
+            .logo {
+                font-size: 1.4rem;
+                font-weight: bold;
+                color: #2c2c2c;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 20px;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: var(--text-muted);
+                font-size: 0.9rem;
+                transition: color 0.3s;
+            }
+
+            .nav-links a.active {
+                color: var(--accent);
+                border-bottom: 2px solid var(--accent);
+                padding-bottom: 5px;
+            }
+
+            /*CONTACT SECTION*/
+          .contact-section{
+            min-height: 80vh;
+            background: #f4f7f6; /* A very light grey/blue to contrast with the white card */
+            padding: 80px 0;
+            display: flex;
+            justify-content: center;
+          }
+          
+           .contact-container{
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            width:100%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+           }
+
+           .contact-container h2{
+            margin-bottom: 10px;
+            font-size: 2rem;
+            color: #2c3e50;
+           }
+
+           .contact-container p{
+            margin-bottom: 20px;
+            color: #666;
+           }
+
+           .form-group{
+            text-align: left;
+            transition: 0.3s;
+            margin-bottom: 20px;
+           }
+
+           .form-group:hover{
+            transform: translateY(-5px);
+           }
+
+           .form-group label{
+            margin-bottom: 8px;
+            display: block;
+            color: #555;
+            font-size: 0.9rem;
+            font-weight: bold;
+           }
+
+           .form-group input,
+           .form-group textarea{
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-family: inherit;
+            transition: 0.3s ease;
+           }
+
+           .form-group input:focus,
+           .form-group textarea:focus{
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(108, 142, 191, 0.15);
+           }
+
+           .contact-container button[type="submit"]{
+            padding: 15px 30px;
+            border-radius: 6px;
+            background-color: #2c3e50;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition:0.3s ease;
+            border: none
+           }
+
+           .contact-container button:hover{
+            transform: translateY(-2px);
+            transform: translateY(-3px);
+            background-color: #1a252f;
+           }
+
+           /*FOOTER*/
+           .main-footer {
+                background-color: #1a252f; /* Dark navy/charcoal */
+                color: #ecf0f1;
+                padding: 60px 0 20px;
+                font-family: 'Segoe UI', Tahoma, sans-serif;
+            }
+
+            .footer-container {
+                max-width: 1100px;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+
+            .footer-col {
+                flex: 1;
+                min-width: 250px;
+                margin-bottom: 30px;
+            }
+
+            .footer-col h3, .footer-col h4 {
+                color: #ffffff;
+                margin-bottom: 20px;
+                font-size: 1.2rem;
+            }
+
+            .footer-col ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .footer-col ul li {
+                margin-bottom: 10px;
+            }
+
+            .footer-col a {
+                color: #bdc3c7;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+
+            .footer-col a:hover {
+                color: #3498db; /* A nice blue hover effect */
+            }
+
+            .footer-bottom {
+                text-align: center;
+                border-top: 1px solid #2c3e50;
+                margin-top: 40px;
+                padding-top: 20px;
+                font-size: 0.9rem;
+                color: #95a5a6;
+            }
+
+           @media (max-width:600px){
+            .contact-container{
+                padding: 20px;
+            }
+           }
+
+           /*About Us*/
+           .about-hero{
+            background: linear-gradient(rgba(20,30,60,0.8), rgba(20,30,60,0.8)),
+            url("https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+           }
+
+           .about-hero h2{
+            font-size: 48px;
+           }
+
+           .about-hero p{
+            font-size: 16px;
+            margin-top: 10px;
+            opacity: 0.8;
+           }
+
+           .Story{
+            padding: 60px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+           }
+
+           .Story h3{
+            font-size: 28px;
+            margin-bottom: 10px;
+           }
+
+           .underline{
+            width: 40px;
+            height: 3px;
+            background: #c65a2e;
+            margin: 10px auto 30px;
+           }
+
+           .story p{
+            margin-bottom: 20px;
+            color: #666;
+            font-size: 15px;
+           }
+
+           .vision-mission{
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            padding: 50px 5%;
+            background-color: #f4f7f6;
+            flex-wrap: wrap;
+           }
+
+           .card{
+            background: #fff;
+            padding: 40px;
+            max-width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: 0.3s;
+            flex: 1;
+           }
+
+           .card:hover{
+            transform: translateY(-10px);
+           }
+
+           .icon{
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+           }
+
+           .card h4{
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #333;
+           }
+
+           .card p{
+            color:#666;
+            font-size: 14px;
+           }
+
+           /* The "Read More" Button */
+            .history-btn {
+                display: inline-block;
+                margin-top: 10px;
+                padding: 10px 20px;
+                background-color: transparent;
+                border: 2px solid #2c3e50;
+                color: #2c3e50;
+                text-decoration: none;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                border-radius: 5px;
+            }
+
+            .history-btn:hover {
+                background-color: #2c3e50;
+                color: #fff;
+            }
+
+            .history-btn i {
+                margin-left: 8px;
+                font-size: 0.9rem;
+            }
+
+
+           /*Ministry section*/
+           .ministries-hero {
+                height: 250px;
+                background: linear-gradient(rgba(20,30,60,0.8), rgba(20,30,60,0.8)),
+                url("https://images.unsplash.com/photo-1529070538774-1843cb3265df") center/cover;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                text-align: center;
+            }
+
+            .ministries-hero h1 {
+                font-size: 42px;
+            }
+
+            .ministries-hero p {
+                margin-top: 10px;
+                opacity: 0.8;
+            }
+
+            /* Grid Layout */
+            .container {
+                padding: 60px 10%;
+            }
+
+            .ministry-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            /* Card Styling */
+            .card {
+                background: var(--card-bg);
+                padding: 40px 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 20px rgba(0,0,0,0.05);
+            }
+
+            .icon-circle {
+                width: 50px;
+                height: 50px;
+                background: #fdfaf6;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                color: var(--accent);
+                font-size: 1.2rem;
+            }
+
+            .card h3 {
+                margin: 0 0 15px 0;
+                font-size: 1.3rem;
+                color: #2c2c2c;
+            }
+
+            .card p {
+                color: var(--text-muted);
+                font-size: 0.95rem;
+                margin-bottom: 25px;
+                flex-grow: 1;
+            }
+
+            /*FIND US SECTION*/
+           .visit-section {
+                padding-top: 60px;
+                background-color: #ffffff;
+                text-align: center;
+            }
+
+            .visit-content {
+                max-width: 800px;
+                margin: 0 auto 40px; /* Centers the text block */
+                padding: 0 20px;
+            }
+
+            .visit-details p {
+                margin: 10px 0;
+                font-size: 1.1rem;
+            }
+
+            .map-container iframe {
+                width: 100%;       /* This makes it cover the whole screen width */
+                height: 450px;     /* Height of the map */
+                border: none;      /* Removes the ugly border */
+                display: block;    /* Removes tiny gap at the bottom */
+            }
+
+            /*GALLERY SECTION*/
+            .gallery-section {
+                padding: 80px 5%;
+                background-color: #f9f9f9;
+            }
+
+            .gallery-header {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            .gallery-header h2 {
+                font-size: 2.5rem;
+                color: #2c3e50;
+            }
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .gallery-item {
+                overflow: hidden;
+                border-radius: 12px;
+                height: 250px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* This crops images perfectly without stretching them */
+                transition: transform 0.5s ease;
+            }
+
+            /* UI/UX Touch: Zoom effect on hover */
+            .gallery-item:hover {
+                transform: translateY(-5px);
+            }
+
+            .gallery-item:hover img {
+                transform: scale(1.1);
+            }
+
+            /* MOBILE RESPONSIVENESS */
+            @media (max-width: 768px) {
+                /* Stack the About section vertically instead of side-by-side */
+                .about-container {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 50px 20px;
+                }
+
+                .about-image, .about-content {
+                    width: 100%;
+                }
+
+                /* Hide the desktop nav links and prepare them for a toggle menu */
+                .nav-links {
+                    display: none; /* We will toggle this with JavaScript later */
+                    flex-direction: column;
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    width: 100%;
+                    background: white;
+                    padding: 20px;
+                    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                }
+
+                .nav-links.active {
+                    display: flex; /* This shows the menu when clicked */
+                }
+
+                /* Adjust the Hero text size for smaller screens */
+                .quote {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .menu-toggle {
+                display: none;
+                cursor: pointer;
+            }
+
+            .bar {
+                display: block;
+                width: 25px;
+                height: 3px;
+                margin: 5px auto;
+                background-color: #333;
+            }
+
+            @media (max-width: 768px) {
+                .menu-toggle {
+                    display: block;
+                }
+            }
+
+        </style>
+
+        <main>
+
+            <!--HOME PAGE-->
+            <section id="Home" class="homehero">
+                 <div class="homeoverlay"></div><div class="homehero-content">
+                        <p class="subtitle">WELCOME TO AMERICA SDA CHURCH</p>
+                        <h1 class="quote">"For where two or three gather in my name, there am I with them."</h1>
+                        <p class="reference">— Matthew 18:20</p>
+                    </div>
+             </section>
+
+              <!--ABOUT US SECTION-->
+            <!-- About us Hero-->
+            <section id="About" class="about-hero">
+                <h2>About Us</h2>
+                <p>Our story.  Our mission.   Our people</p>
+            </section>
+            <!--Story-->
+            <section class="Story">
+                <h3>Our Story</h3>
+                <div class="underline"></div>
+                <p>
+                    The roots of our faith were planted in 1906 when the first Adventist missionaries arrived at <strong>Gendia, Kendu Bay</strong>. From these humble shores, a movement of education and spiritual awakening began, led by pioneers like <strong>Dani Leah Onduru Oteko</strong>, one of the earliest converts whose courage helped establish missions from Gendia to Nyanchwa.
+                </p>
+                <p>
+                    For decades, our community journeyed through challenges—from the inaugural Sabbaths at Oindo to the establishment of the Kanyamfwa station. This 120-year legacy of resilience culminated in the birth of the <strong>America SDA Church</strong>, inaugurated as a Sabbath School in 1975 and growing into the thriving District Headquarters it is today.
+                </p>
+                <a href="history.html" class="history-btn">
+                    Read Full History <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </section>
+            <section class="vision-mission">
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-eye"></i></div>
+                    <h4>Our Vision</h4>
+                    <p>In harmony with Bible prophecies, the ultimate climax of history is the restoration of all things to full harmony with the divine will and righteousness. Guided by this perspective, the Church’s vision is to see <b>every person having the opportunity to hear and accept the everlasting gospel</b> before the return of Jesus.</p>
+                </div>
+                 <div class="card">
+                    <div class="icon"><i class="fa-solid fa-person-praying"></i></div>
+                    <h4>Our Mission</h4>
+                    <p>To make disciples of Jesus Christ who live as His loving witnesses and proclaim to all people the everlasting gospel of the Three Angels’ Messages in preparation for His soon return</p>
+                </div>
+            </section>
+
+            <!--MINISTRIES SECTION-->
+            <!--Ministries hero-->
+            <section id="Ministries" class="ministries-hero">
+                <h1>Ministries</h1>
+                <p>Find your place to serve and grow</p>
+            </section>
+            <!--get involved-->
+            <div class="ministry-grid">
+
+                <div class="card">
+                    <div class="icon-circle"><i class="fa-solid fa-book-bible"></i></div>
+                    <h3>Sabbath School</h3>
+                    <p>Join us every Saturday at 9:00 AM for deep, interactive Bible study.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-circle"><i class="fa-solid fa-baby"></i></div>
+                    <h3>Children Ministry</h3>
+                    <p>Empowering our children through leadership, camping, and spiritual growth.</p>
+                </div>
+
+
+                <div class="card">
+                    <div class="icon-circle"><i class="fa-solid fa-users"></i></div>
+                    <h3>Youth Ministry</h3>
+                    <p>Empowering teens to grow in faith through worship, small groups, retreats, and mission trips. A safe space for young people to ask questions and discover God's plan.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-circle"><i class="fa-solid fa-music"></i></div>
+                    <h3>Music Ministry</h3>
+                        <p>Lifting our voices in praise with traditional hymns and contemporary worship.</p>
+                    </div>
+
+                <div class="card">
+                    <div class="icon-circle"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>Bible Study Groups</h3>
+                    <p>Small groups that meet weekly to study Scripture, pray together, and build deep friendships. Groups available for men, women, couples, and mixed.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-circle"><i class="fa-solid fa-heart"></i></div>
+                    <h3>Care Ministry</h3>
+                    <p>Providing spiritual and practical support to those in need — hospital visits, grief support, counseling referrals, and meal trains.</p>
+                </div>
+
+                <div class="card">
+                <div class="icon-circle"><i class="fa-solid fa-apple-whole"></i></div>
+                    <h3>Health Ministry</h3>
+                    <p>Sharing the Adventist health message for a better, wholistic lifestyle.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-circle"><i class="fa-solid fa-globe"></i></div>
+                    <h3>Community Outreach</h3>
+                    <p>Serving our community and beyond through food pantries, homeless ministry, disaster relief, and local partnerships that demonstrate Christ's love.</p>
+                </div>
+
+            </div>
+
+            <!--GALLERY SECTION-->
+            <section id="gallery" class="gallery-section">
+                <div class="gallery-header">
+                    <h2>Church Life</h2>
+                    <p>Capturing moments of worship, fellowship, and service.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop" alt="Community Event">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/uploads/1411160110892ab555b6f/80b0d25e?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Worship Service">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1467307983825-619715426c70?q=80&w=1974&auto=format&fit=crop" alt="Youth Ministry">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop" alt="Fellowship">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" alt="Outreach">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop" alt="Celebration">
+                    </div>
+                </div>
+            </section>
+
+            <!--FIND US SECTION-->
+            <section id="Visit" class="visit-section">
+                <div class="visit-content">
+                    <h2>Visit Us</h2>
+                    <p>We are located in Nyangweso, Homa Bay County. Whether you are a resident or just passing through, our doors are always open for worship.</p>
+                    
+                    <div class="visit-details">
+                        <p>📍 <strong>Address:</strong> Nyangweso, Homa Bay, Kenya</p>
+                        <p>🕒 <strong>Service Times:</strong> Saturdays | 8:00 AM - 5:00 PM</p>
+                        <p>📞 <strong>Phone:</strong> +254 123 45678</p>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.774570020756!2d34.5507220757065!3d-0.3685302996278457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x197dcd0856b7225f%3A0x8cd70e16a48408f5!2sAmerica%20Seventh-day%20Adventist%20Church!5e0!3m2!1sen!2ske!4v1712154000000!5m2!1sen!2ske" 
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </section>
+            <!--CONTACT SECTION-->
+            <section id="Contact Us" class="contact-section">
+                <div class="contact-container">
+                    <h2>Contact Us</h2>
+                    <p>We'd love to hear from you</p>
+                    <form action="https://formspree.io/f/xjgprpag" method="post">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" name="name" required>
+                            
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email reqired">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tell" name="phone" placeholder="+25412345678" pattern="^(+254|0)[17]\d{8}$" required>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
+            <script>
+                const menu = document.querySelector('#mobile-menu');
+                const menuLinks = document.querySelector('.nav-links');
+
+                menu.addEventListener('click', function() {
+                    menuLinks.classList.toggle('active');
+                });
+
+                // Simple script to handle active states or console logging interactions
+                document.querySelectorAll('.card').forEach(card => {
+                    card.addEventListener('click', () => {
+                        const title = card.querySelector('h3').innerText;
+                        console.log(`User interested in: ${title}`);
+                    });
+                });
+
+                // Example: Change nav background on scroll
+                window.addEventListener('scroll', () => {
+                    const nav = document.querySelector('.navbar');
+                    if (window.scrollY > 50) {
+                        nav.style.backgroundColor = '#ffffff';
+                        nav.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+                    } else {
+                        nav.style.backgroundColor = 'transparent';
+                        nav.style.boxShadow = 'none';
+                    }
+                });
+            </script>
+           <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>America SDA</h3>
+                    <p>Spreading hope and faith<br> in Homabay and beyond.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Ministries">Ministries</a></li>
+                         <li><a href="leaders.html">Leadership</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#Visit">Visit Us</a></li>
+                        <li><a href="#Contact Us">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p>📞 +254 123 45678</p>
+                    <p>✉️ americasda@gmail.org</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 America SDA Church. All rights reserved.</p>
+            </div>
+        </footer>
+        </main>
+    </body>
+</html>

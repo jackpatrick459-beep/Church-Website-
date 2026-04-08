@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Leadership | America SDA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e67e22;
+            --bg: #f4f7f6;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); margin: 0; padding: 40px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 50px; }
+
+        /* --- Shared History/Leadership Styles (Add to style.css) --- */
+
+        /* Centering utility */
+        .text-center {
+            text-align: center;
+        }
+
+        /* Back Button Layout */
+        .back-btn-container {
+            max-width: 1100px; /* or whatever your container size is */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* The "Back to Home" link (matches history) */
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #2c3e50; /* Your primary blue */
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .back-btn:hover {
+            color: #e67e22; /* Your orange accent */
+        }
+
+        /* The Common Header Block */
+        .history-header {
+            margin-bottom: 50px; /* Gives the grid room to breathe */
+            padding: 0 20px;
+        }
+
+        .history-header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50; /* Your primary blue */
+            margin-bottom: 30px;
+        }
+
+        /* The horizontal line and the subtitle */
+        .history-header p {
+            color: #555;
+            max-width: 600px; /* Centers the subtitle and keeps it on two lines */
+            margin: 0 auto;
+            position: relative;
+            padding-bottom: 15px; /* Space for the line */
+            margin-top: 30px;
+        }
+
+        /* Add that professional-looking horizontal line from the history page */
+        .history-header p::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #555; /* Your orange accent */
+            border-radius: 2px;
+        }
+                
+                .section-title { 
+                    border-bottom: 2px solid var(--accent); 
+                    display: inline-block; 
+                    margin: 40px 0 20px;
+                    color: var(--primary);
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+        .leader-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .leader-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .leader-card:hover { transform: translateY(-5px); }
+        
+        .role { font-weight: bold; color: var(--accent); display: block; margin-bottom: 10px; font-size: 0.9rem; }
+        .names { list-style: none; padding: 0; margin: 0; color: #555; }
+        .names li { margin-bottom: 5px; font-size: 1.05rem; }
+        .icon { margin-right: 10px; color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="back-btn-container">
+        <a href="mainweb.html" class="back-btn">← Back to Home</a>
+    </div>
+
+   <div class="history-header text-center">
+        <h1>Church Leadership</h1>
+        <p>The dedicated team serving the America SDA Church community.</p>
+    </div>
+
+    <h2 class="section-title">Core Administration</h2>
+    <div class="leader-grid">
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-users-line icon"></i>Elders</span>
+            <ul class="names">
+                <li>Elizabeth Ojijo <b>1st Elder</b></li>
+                <li>Jack Hamisi</li>
+                <li>Dan Hamisi</li>
+                <li>Prisca Amolo</li>
+                <li>Harisson Ojuang</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-pen-nib icon"></i>Church Clerk</span>
+            <ul class="names">
+                <li>Eunice Jack</li>
+                <li>Sammy Aseto (Asst)</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-vault icon"></i>Treasurer</span>
+            <ul class="names">
+                <li>Hellen Jack</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">Ministries & Services</h2>
+    <div class="leader-grid">
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-hand-holding-heart icon"></i>Deacons & Deaconesses</span>
+            <ul class="names">
+                <li><strong>Head Deacon:</strong> Harrison Ojuang</li>
+                <li><strong>Head Deaconess:</strong> Caroline Hosea</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-music icon"></i>Music Ministry</span>
+            <ul class="names">
+                <li>Elly Obuya</li>
+                <li>Emmanuel Oluoch</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-stethoscope icon"></i>Health Ministry</span>
+            <ul class="names">
+                <li>Julita Otijo</li>
+                <li>Jane Odongo</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-book-bible icon"></i>Sabbath School</span>
+            <ul class="names">
+                <li>Eunice Jack</li>
+                <li>Syprose Rashid</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-hands-praying icon"></i>Personal Ministries</span>
+            <ul class="names">
+                <li>Julita Ojijo</li>
+                <li>Prisca Amolo</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-scroll icon"></i>Publishing & Prophecy</span>
+            <ul class="names">
+                <li>Flowrence Ogada</li>
+                <li>Prisca Amolo</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-scale-balanced icon"></i>Public Affairs & Religious Liberty</span>
+            <ul class="names">
+                <li>Prisca Amolo</li>
+                <li>Elly Obuya</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-heart-pulse icon"></i>Adventist Possibility Ministries</span>
+            <ul class="names">
+                <li>Jack Hamisi</li>
+                <li>Emmanuel Oluoch</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">Youth & Development</h2>
+    <div class="leader-grid">
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-child icon"></i>Pathfinders & Adventures</span>
+            <ul class="names">
+                <li>Marry Sabbath (Pathfinders)</li>
+                <li>Elizabeth Okeyo (Adventures)</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-person-arrow-up-from-line icon"></i>Ambassadors & Young Adults</span>
+            <ul class="names">
+                <li>Rolex Okeyo</li>
+                <li>Jack Akech</li>
+            </ul>
+        </div>
+    </div>
+    <h2 class="section-title">Family & Education</h2>
+    <div class="leader-grid">
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-house-chimney icon"></i>Family Life</span>
+            <ul class="names">
+                <li>Harison Ojuang</li>
+                <li>Aska Ojwang</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-graduation-cap icon"></i>Education</span>
+            <ul class="names">
+                <li>Sammy Aseto</li>
+                <li>Elizabeth Okeyo</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-baby-carriage icon"></i>Children Ministry</span>
+            <ul class="names">
+                <li>Hellen Jack</li>
+                <li>Elizabeth Okeyo</li>
+                <li>Linnet Akoko</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-bullhorn icon"></i>Communication</span>
+            <ul class="names">
+                <li>Rolex Okeyo</li>
+                <li>Judith Otieno</li>
+            </ul>
+        </div>
+    </div>
+    <h2 class="section-title">Community & Development</h2>
+    <div class="leader-grid">
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-handshake-angle icon"></i>Dorcas Society</span>
+            <ul class="names">
+                <li>Benta Ouma</li>
+                <li>Judith Otieno</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-venus icon"></i>Women Ministry</span>
+            <ul class="names">
+                <li>Prisca Amolo</li>
+                <li>Flowrence Ogada</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-coins icon"></i>Stewardship</span>
+            <ul class="names">
+                <li>Flowrence Oking</li>
+                <li>Julita Ojijo</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role"><i class="fa-solid fa-trowel-bricks icon"></i>Development</span>
+            <ul class="names">
+                <li>Samuel Aseto</li>
+                <li>Jack Akech</li>
+            </ul>
+        </div>
+    </div>
+    <h2 class="section-title">Group Elders</h2>
+    <div class="leader-grid">
+        <div class="leader-card">
+            <span class="role">America A</span>
+            <ul class="names">
+                <li>Julita Ojijo</li>
+                <li>Eunice Jack</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role">America B</span>
+            <ul class="names">
+                <li>Elsha Opon</li>
+                <li>Syprose Rashid</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role">Soko Group</span>
+            <ul class="names">
+                <li>Elizabeth Ochieng</li>
+                <li>Caren Obongo</li>
+            </ul>
+        </div>
+        <div class="leader-card">
+            <span class="role">Alara Group</span>
+            <ul class="names">
+                <li>Flowrence Oking</li>
+                <li>Josphine Odidi</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
