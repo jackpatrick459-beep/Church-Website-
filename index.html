@@ -443,6 +443,43 @@
             font-size: 14px;
            }
 
+           /* This targets mobile phones (screens smaller than 768px) */
+                @media screen and (max-width: 768px) {
+                .vision-mission {
+                    flex-direction: column; /* Stacks the cards vertically */
+                    padding: 20px;
+                }
+
+                .card {
+                    width: 100% !important; /* Makes card take full width */
+                    margin-bottom: 30px; /* Space between Vision and Mission */
+                    padding: 30px 15px;
+                    text-align: center; /* Center text for a cleaner mobile look */
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Soft border to define the card */
+                    border-radius: 12px;
+                }
+
+                .card p {
+                    text-align: center; /* Fixes the awkward justification gaps */
+                    line-height: 1.6;
+                    font-size: 1rem;
+                    margin: 0 auto;
+                    max-width: 90%; /* Prevents text from hitting the very edge */
+                }
+
+                .card h4 {
+                    font-size: 1.8rem;
+                    margin-bottom: 15px;
+                    color: #2c3e50;
+                }
+
+                /* Icon styling for mobile */
+                .icon i {
+                    font-size: 2.5rem;
+                    margin-bottom: 10px;
+                }
+            }
+
            /* The "Read More" Button */
             .history-btn {
                 display: inline-block;
