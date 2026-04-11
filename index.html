@@ -712,6 +712,42 @@
                 }
             }
 
+            /* --- Scroll Reveal Animations --- */
+            .reveal-init {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.8s ease-out;
+            }
+
+            .revealed {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            /* --- Mobile Menu Styles --- */
+            @media screen and (max-width: 768px) {
+                .nav-links {
+                    display: none; /* Hide by default on mobile */
+                    flex-direction: column;
+                    width: 100%;
+                    background: #2c3e50;
+                    position: absolute;
+                    top: 70px; /* Adjust based on your header height */
+                    left: 0;
+                    padding: 20px;
+                }
+
+                .nav-links.active {
+                    display: flex; /* Show when JS toggles 'active' */
+                }
+            }
+
+            /* --- Search Bar Styling (For Leaders Page) --- */
+            .search-container {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
         </style>
 
         <main>
@@ -895,7 +931,7 @@
                     </form>
                 </div>
             </section>
-            <script>
+            <script src="script.js">
                 const menu = document.querySelector('#mobile-menu');
                 const menuLinks = document.querySelector('.nav-links');
 

@@ -105,6 +105,22 @@
         .names { list-style: none; padding: 0; margin: 0; color: #555; }
         .names li { margin-bottom: 5px; font-size: 1.05rem; }
         .icon { margin-right: 10px; color: var(--primary); }
+
+                #leaderSearch {
+                padding: 12px 20px;
+                width: 100%;
+                max-width: 400px;
+                border: 2px solid #ddd;
+                border-radius: 25px;
+                font-size: 1rem;
+                outline: none;
+                transition: border-color 0.3s;
+            }
+
+            #leaderSearch:focus {
+                border-color: #e67e22; /* Your accent color */
+            }
+
     </style>
 </head>
 <body>
@@ -118,6 +134,10 @@
    <div class="history-header text-center">
         <h1>Church Leadership</h1>
         <p>The dedicated team serving the America SDA Church community.</p>
+    </div>
+
+    <div class="search-container">
+    <input type="text" id="leaderSearch" placeholder="Search by name or department...">
     </div>
 
     <h2 class="section-title">Core Administration</h2>
@@ -319,6 +339,6 @@
         </div>
     </div>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>
